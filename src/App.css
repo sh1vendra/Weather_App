@@ -6,7 +6,7 @@
   --grad-thunder: linear-gradient(135deg, #141e30, #243b55);
   --grad-snow: linear-gradient(135deg, #83a4d4, #b6fbff);
   --grad-fog: linear-gradient(135deg, #606c88, #3f4c6b);
-  --grad-default: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  --grad-default: linear-gradient(160deg, #f9a825 0%, #e91e8c 28%, #6a1b9a 56%, #1565c0 100%);
 }
 
 * {
