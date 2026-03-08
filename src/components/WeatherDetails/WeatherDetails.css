@@ -2,45 +2,101 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  margin: 4px 0 20px;
+  margin: 20px 0 24px;
 }
 
 .detail-card {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 16px;
-  padding: 16px 10px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 18px 12px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   text-align: center;
-  transition: background 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
 }
 
 .detail-card:hover {
-  background: rgba(255, 255, 255, 0.22);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
 .detail-icon {
-  font-size: 22px;
+  font-size: 24px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
 }
 
 .detail-label {
   font-size: 10px;
-  color: rgba(255, 255, 255, 0.65);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  opacity: 0.75;
 }
 
 .detail-value {
-  font-size: 14px;
-  color: #fff;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
+
+/* Humidity — ocean blue */
+.detail-card:nth-child(1) {
+  background: linear-gradient(145deg, rgba(0, 120, 255, 0.4), rgba(0, 180, 255, 0.15));
+  border: 1px solid rgba(0, 180, 255, 0.45);
+  box-shadow: 0 4px 20px rgba(0, 120, 255, 0.2), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.detail-card:nth-child(1) .detail-value { color: #60d0ff; }
+.detail-card:nth-child(1) .detail-label { color: #60d0ff; }
+
+/* Wind — emerald */
+.detail-card:nth-child(2) {
+  background: linear-gradient(145deg, rgba(0, 200, 150, 0.4), rgba(0, 230, 185, 0.15));
+  border: 1px solid rgba(0, 220, 170, 0.45);
+  box-shadow: 0 4px 20px rgba(0, 200, 150, 0.2), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.detail-card:nth-child(2) .detail-value { color: #00e6b9; }
+.detail-card:nth-child(2) .detail-label { color: #00e6b9; }
+
+/* Pressure — violet */
+.detail-card:nth-child(3) {
+  background: linear-gradient(145deg, rgba(150, 50, 220, 0.4), rgba(200, 100, 255, 0.15));
+  border: 1px solid rgba(190, 80, 255, 0.45);
+  box-shadow: 0 4px 20px rgba(150, 50, 220, 0.2), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.detail-card:nth-child(3) .detail-value { color: #d08cff; }
+.detail-card:nth-child(3) .detail-label { color: #d08cff; }
+
+/* Visibility — amber */
+.detail-card:nth-child(4) {
+  background: linear-gradient(145deg, rgba(230, 140, 20, 0.4), rgba(255, 180, 50, 0.15));
+  border: 1px solid rgba(255, 170, 30, 0.45);
+  box-shadow: 0 4px 20px rgba(230, 140, 20, 0.2), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.detail-card:nth-child(4) .detail-value { color: #ffbe40; }
+.detail-card:nth-child(4) .detail-label { color: #ffbe40; }
+
+/* Sunrise — golden */
+.detail-card:nth-child(5) {
+  background: linear-gradient(145deg, rgba(255, 200, 0, 0.35), rgba(255, 160, 30, 0.15));
+  border: 1px solid rgba(255, 200, 0, 0.45);
+  box-shadow: 0 4px 20px rgba(255, 180, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.detail-card:nth-child(5) .detail-value { color: #ffd54f; }
+.detail-card:nth-child(5) .detail-label { color: #ffd54f; }
+
+/* Sunset — coral */
+.detail-card:nth-child(6) {
+  background: linear-gradient(145deg, rgba(240, 70, 60, 0.4), rgba(255, 110, 80, 0.15));
+  border: 1px solid rgba(255, 100, 80, 0.45);
+  box-shadow: 0 4px 20px rgba(240, 70, 60, 0.2), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.detail-card:nth-child(6) .detail-value { color: #ff7b6b; }
+.detail-card:nth-child(6) .detail-label { color: #ff7b6b; }
 
 @media (max-width: 480px) {
   .weather-details {
