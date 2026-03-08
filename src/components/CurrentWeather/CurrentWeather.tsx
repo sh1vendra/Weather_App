@@ -29,6 +29,7 @@ const CurrentWeather: React.FC<Props> = ({ data }) => {
           <span className="high-low">H: {Math.round(main.temp_max)}°&nbsp;&nbsp;L: {Math.round(main.temp_min)}°</span>
         </div>
       </div>
+      <hr className="current-divider" />
     </div>
   );
 };
